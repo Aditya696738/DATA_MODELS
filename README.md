@@ -1,30 +1,32 @@
-
+```mermaid
+erDiagram
     USER {
         ObjectId _id
-        String    name
-        String    email
-        String    password
-        Date      createdAt
-        Date      updatedAt
+        String name
+        String email
+        String password
+        Date createdAt
+        Date updatedAt
     }
     TODO {
         ObjectId _id
-        String    title
-        String    description
-        Boolean   isCompleted
-        Date      dueDate
-        ObjectId  userId  
-        Date      createdAt
-        Date      updatedAt
+        String title
+        String description
+        Boolean isCompleted
+        Date dueDate
+        ObjectId userId
+        Date createdAt
+        Date updatedAt
     }
     SUB_TODO {
         ObjectId _id
-        String    title
-        Boolean   isCompleted
-        ObjectId  todoId
-        Date      createdAt
-        Date      updatedAt
+        String title
+        Boolean isCompleted
+        ObjectId todoId
+        Date createdAt
+        Date updatedAt
     }
 
-   
-    
+    USER ||--o{ TODO : "has many"
+    TODO ||--o{ SUB_TODO : "has many"
+```
