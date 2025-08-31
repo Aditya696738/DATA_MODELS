@@ -1,14 +1,30 @@
-# Node.js Express template
 
-This is a Node.js Express project with an HTTP server.
+    USER {
+        ObjectId _id
+        String    name
+        String    email
+        String    password
+        Date      createdAt
+        Date      updatedAt
+    }
+    TODO {
+        ObjectId _id
+        String    title
+        String    description
+        Boolean   isCompleted
+        Date      dueDate
+        ObjectId  userId  
+        Date      createdAt
+        Date      updatedAt
+    }
+    SUB_TODO {
+        ObjectId _id
+        String    title
+        Boolean   isCompleted
+        ObjectId  todoId
+        Date      createdAt
+        Date      updatedAt
+    }
 
-Add your [configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) to optimize it for [CodeSandbox](https://codesandbox.io).
-
-## How does this work?
-
-We run `yarn start` to start an HTTP server that runs on http://localhost:8080. You can open new or existing devtools with the + button next to the devtool tabs.
-
-## Resources
-
-- [CodeSandbox — Docs](https://codesandbox.io/docs)
-- [CodeSandbox — Community](https://codesandbox.community)
+   
+    
